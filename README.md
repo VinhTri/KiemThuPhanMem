@@ -33,7 +33,8 @@
 - 
 ## 4. Hình ảnh minh chứng bài tập
 
-img/git_push.png
+
+<img width="1244" height="595" alt="git_push" src="https://github.com/user-attachments/assets/abc80ad7-ded3-4752-82df-b8f5d00db3bc" />
 
 
 ## 5. Công cụ và công nghệ sử dụng
