@@ -65,6 +65,3 @@
 - Hoàn thiện các bài tập thực hành theo yêu cầu môn học
 
 ---
-
-## 9. Link GitHub
-- Repository bài tập: https://github.com/VinhTri/KTPM
