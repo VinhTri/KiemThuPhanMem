@@ -33,6 +33,7 @@
 - 
 ## 4. Hình ảnh minh chứng bài tập
 
+![Uploading image.png…]()
 
 ## 5. Công cụ và công nghệ sử dụng
 - Ngôn ngữ: Java
