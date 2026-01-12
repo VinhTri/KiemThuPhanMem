@@ -33,7 +33,8 @@
 - 
 ## 4. Hình ảnh minh chứng bài tập
 
-![Uploading image.png…]()
+![Uploading Ảnh chụp màn hình 2026-01-12 164609.png…]()
+
 
 ## 5. Công cụ và công nghệ sử dụng
 - Ngôn ngữ: Java
