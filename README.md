@@ -33,7 +33,7 @@
 - 
 ## 4. Hình ảnh minh chứng bài tập
 
-img/Ảnh chụp màn hình 2026-01-12 164609.png
+img/git_push.png
 
 
 ## 5. Công cụ và công nghệ sử dụng
