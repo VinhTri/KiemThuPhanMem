@@ -18,11 +18,6 @@ Kiểm_Thử
 │ ├── src
 │ │ ├── main
 │ │ └── test
-
-
-## Bài tập
-
-
 ## Công nghệ sử dụng
 - Java
 - Maven
