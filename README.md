@@ -32,7 +32,7 @@
 - Viết class và test cơ bản bằng JUnit
 - 
 ## 4. Hình ảnh minh chứng bài tập
-
+- Bài tập thực hành 1
 
 <img width="1244" height="595" alt="git_push" src="https://github.com/user-attachments/assets/abc80ad7-ded3-4752-82df-b8f5d00db3bc" />
 
