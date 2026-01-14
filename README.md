@@ -30,7 +30,7 @@
 - Đẩy bài tập tuần 1 lên GitHub
 - Tạo project Java Maven
 - Viết class và test cơ bản bằng JUnit
-- 
+  
 ## 4. Hình ảnh minh chứng bài tập
 - Bài tập thực hành 1
 
