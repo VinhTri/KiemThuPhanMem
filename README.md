@@ -73,7 +73,7 @@
 
 ## 1. Thông tin chung
 
-* **Môn học:** (Sinh viên tự điền)
+* **Môn học:** Kiểm thử phần mềmmềm
 * **Tuần:** 2
 * **Bài tập:** Thực hành kiểm thử với JUnit
 * **Ngôn ngữ:** Java
@@ -175,7 +175,7 @@ Sử dụng JUnit 5 với lớp `StudentAnalyzerTest` để kiểm thử từng 
 ## 6. Tổ chức thư mục dự án
 
 ```
-unit-test/
+ThucHanhVoiunittest/
 │── src/
 │   └── StudentAnalyzer.java
 │
@@ -246,10 +246,6 @@ Bài tập tuần 2 giúp sinh viên làm quen với kiểm thử tự động b
 * Áp dụng CI (GitHub Actions) để chạy test tự động khi push code.
 
 ---
-
-**Sinh viên thực hiện:** (Tự điền tên)
-**Ngày nộp:** (Tự điền)
-
 
 # BÁO CÁO TUẦN 3
 
