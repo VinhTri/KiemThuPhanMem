@@ -5,63 +5,53 @@ import java.util.List;
 public class StudentAnalyzer {
 
     /**
-     * Phân tích điểm số và trả về số lượng học sinh đạt loại Giỏi.
-     * @param scores danh sách điểm số từ 0 đến 10
-     * @return số học sinh đạt loại Giỏi (>= 8.0)
+     * Đếm số sinh viên có điểm xuất sắc
+     * Điều kiện:
+     * - Điểm hợp lệ: 0 <= score <= 10
+     * - Xuất sắc: score >= 8.0
      */
     public int countExcellentStudents(List<Double> scores) {
-        // Điều kiện 2: danh sách rỗng hoặc null
         if (scores == null || scores.isEmpty()) {
             return 0;
         }
 
         int count = 0;
+        for (Double score : scores) {
+            if (score == null) continue;
 
-        // Vòng lặp 1: duyệt danh sách điểm
-        for (double score : scores) {
-            // Điều kiện 1: bỏ qua điểm không hợp lệ
-            if (score < 0 || score > 10) {
-                continue;
-            }
-
-            // Kiểm tra học sinh giỏi
-            if (score >= 8.0) {
+            if (score >= 8.0 && score <= 10.0) {
                 count++;
             }
         }
-
         return count;
     }
 
     /**
-     * Tính điểm trung bình hợp lệ (từ 0 đến 10)
-     * @param scores danh sách điểm
-     * @return điểm trung bình của các điểm hợp lệ
+     * Tính điểm trung bình các điểm hợp lệ
+     * Điểm hợp lệ: 0 <= score <= 10
+     * Nếu không có điểm hợp lệ → trả về 0.0
      */
     public double calculateValidAverage(List<Double> scores) {
-        // Điều kiện 2: danh sách rỗng hoặc null
         if (scores == null || scores.isEmpty()) {
-            return 0;
+            return 0.0;
         }
 
-        double sum = 0;
-        int validCount = 0;
+        double sum = 0.0;
+        int count = 0;
 
-        // Vòng lặp 2: duyệt danh sách để tính trung bình
-        for (double score : scores) {
-            // Điều kiện 1: chỉ lấy điểm hợp lệ
-            if (score >= 0 && score <= 10) {
+        for (Double score : scores) {
+            if (score == null) continue;
+
+            if (score >= 0.0 && score <= 10.0) {
                 sum += score;
-                validCount++;
+                count++;
             }
         }
 
-        // Tránh chia cho 0
-        if (validCount == 0) {
-            return 0;
+        if (count == 0) {
+            return 0.0;
         }
 
-        return sum / validCount;
+        return sum / count;
     }
 }
-
