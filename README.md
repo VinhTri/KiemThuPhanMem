@@ -65,6 +65,192 @@
 - Hoàn thiện các bài tập thực hành theo yêu cầu môn học
 
 ---
+# BÁO CÁO TUẦN 2
+
+## Chủ đề: Kiểm thử đơn vị với JUnit – Phân tích dữ liệu điểm số học sinh
+
+---
+
+## 1. Thông tin chung
+
+* **Môn học:** (Sinh viên tự điền)
+* **Tuần:** 2
+* **Bài tập:** Thực hành kiểm thử với JUnit
+* **Ngôn ngữ:** Java
+* **Công cụ:** JDK, JUnit 5, Git, GitHub
+
+---
+
+## 2. Mục tiêu học tập
+
+Thông qua bài tập này, sinh viên đạt được các mục tiêu sau:
+
+* Hiểu cách viết **kiểm thử đơn vị (Unit Test)** bằng JUnit.
+* Biết cách phân tích yêu cầu chức năng để xây dựng test case.
+* Thực hành tổ chức mã nguồn theo cấu trúc chuẩn (`src/`, `test/`).
+* Biết cách sử dụng **GitHub Issues** và **commit message** để quản lý công việc.
+* Bước đầu khai thác **AI tạo sinh** để hỗ trợ lập trình và kiểm thử.
+
+---
+
+## 3. Mô tả bài toán
+
+Bài toán yêu cầu xây dựng lớp `StudentAnalyzer` để phân tích điểm số học sinh.
+
+### 3.1. Các chức năng chính
+
+Lớp `StudentAnalyzer` gồm 2 phương thức:
+
+1. **countExcellentStudents(List<Double> scores)**
+
+   * Đếm số học sinh đạt loại **Giỏi** (điểm >= 8.0).
+   * Bỏ qua các điểm không hợp lệ (nhỏ hơn 0 hoặc lớn hơn 10).
+   * Nếu danh sách rỗng, trả về 0.
+
+2. **calculateValidAverage(List<Double> scores)**
+
+   * Tính điểm trung bình của các điểm hợp lệ (từ 0 đến 10).
+   * Bỏ qua các điểm không hợp lệ.
+   * Nếu không có điểm hợp lệ, trả về 0.
+
+---
+
+## 4. Phân tích yêu cầu kỹ thuật
+
+### 4.1. Điều kiện xử lý
+
+* **Validate dữ liệu:**
+
+  * Điểm < 0 hoặc > 10 → bỏ qua.
+* **Danh sách rỗng:**
+
+  * Trả về kết quả mặc định là 0.
+
+### 4.2. Thuật toán
+
+* Sử dụng **vòng lặp** để duyệt qua danh sách điểm.
+* Với mỗi điểm:
+
+  * Kiểm tra hợp lệ.
+  * Nếu hợp lệ:
+
+    * Với hàm đếm: kiểm tra >= 8.0.
+    * Với hàm trung bình: cộng tổng và tăng biến đếm.
+
+---
+
+## 5. Thiết kế kiểm thử với JUnit
+
+### 5.1. Mục tiêu kiểm thử
+
+* Đảm bảo các phương thức hoạt động đúng với:
+
+  * Trường hợp bình thường.
+  * Trường hợp biên.
+  * Trường hợp dữ liệu không hợp lệ.
+
+### 5.2. Các nhóm test case
+
+#### a. Trường hợp bình thường
+
+* Danh sách có cả điểm hợp lệ và không hợp lệ.
+* Danh sách toàn bộ điểm hợp lệ.
+
+#### b. Trường hợp biên
+
+* Danh sách rỗng.
+* Danh sách chỉ chứa 0 hoặc 10.
+
+#### c. Trường hợp ngoại lệ
+
+* Có điểm âm.
+* Có điểm lớn hơn 10.
+
+### 5.3. Lớp kiểm thử
+
+Sử dụng JUnit 5 với lớp `StudentAnalyzerTest` để kiểm thử từng phương thức độc lập.
+
+---
+
+## 6. Tổ chức thư mục dự án
+
+```
+unit-test/
+│── src/
+│   └── StudentAnalyzer.java
+│
+│── test/
+│   └── StudentAnalyzerTest.java
+│
+└── README.md
+```
+
+Cách tổ chức này giúp:
+
+* Tách biệt rõ mã nguồn và mã kiểm thử.
+* Dễ dàng chạy test tự động.
+
+---
+
+## 7. Quản lý công việc với GitHub
+
+### 7.1. Danh sách Issues đã tạo
+
+| STT | Tên Issue                         | Mô tả                                           |
+| --- | --------------------------------- | ----------------------------------------------- |
+| 1   | Viết hàm countExcellentStudents() | Xử lý kiểm tra điểm hợp lệ và đếm học sinh giỏi |
+| 2   | Viết hàm calculateValidAverage()  | Tính trung bình các điểm hợp lệ                 |
+| 3   | Viết test cho 2 hàm trên          | Viết test case bằng JUnit                       |
+| 4   | Viết tài liệu README.md           | Mô tả bài toán và hướng dẫn chạy                |
+
+### 7.2. Commit gắn với Issue
+
+Ví dụ commit message:
+
+* `feat: implement countExcellentStudents() #1`
+* `feat: implement calculateValidAverage() #2`
+* `test: add unit tests for StudentAnalyzer #3`
+* `docs: update README with instructions #4`
+
+Việc liên kết commit với issue giúp theo dõi tiến độ và quản lý dự án hiệu quả.
+
+---
+
+## 8. README.md – Hướng dẫn sử dụng
+
+Nội dung chính của README:
+
+* Mô tả bài toán và mục tiêu.
+* Yêu cầu môi trường (JDK, JUnit).
+* Hướng dẫn chạy chương trình.
+* Hướng dẫn chạy kiểm thử đơn vị bằng JUnit.
+
+---
+
+## 9. Kết quả đạt được
+
+* Hoàn thành đầy đủ 2 phương thức theo yêu cầu.
+* Viết được các test case bao phủ nhiều tình huống khác nhau.
+* Nắm được quy trình **viết code → viết test → commit → quản lý issue**.
+* Hiểu rõ vai trò của kiểm thử đơn vị trong phát triển phần mềm.
+
+---
+
+## 10. Kết luận
+
+Bài tập tuần 2 giúp sinh viên làm quen với kiểm thử tự động bằng JUnit và cách tổ chức dự án Java theo chuẩn. Thông qua việc kết hợp GitHub Issues, commit message và test case, sinh viên có cái nhìn thực tế hơn về quy trình phát triển phần mềm chuyên nghiệp.
+
+**Hướng phát triển:**
+
+* Bổ sung thêm test cho dữ liệu lớn.
+* Áp dụng CI (GitHub Actions) để chạy test tự động khi push code.
+
+---
+
+**Sinh viên thực hiện:** (Tự điền tên)
+**Ngày nộp:** (Tự điền)
+
+
 # BÁO CÁO TUẦN 3
 
 ## KIỂM THỬ TỰ ĐỘNG (AUTOMATION TESTING) VỚI CYPRESS
