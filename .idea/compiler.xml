@@ -9,5 +9,8 @@
         <module name="ThucHanhKiemThuVoiJunit" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="End-to-End_Cypress" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
